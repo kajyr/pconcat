@@ -1,0 +1,14 @@
+{
+  "name": "pcontat",
+  "version": "1.0.0",
+  "description": "A wrapper around the concat module, that returns a promise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concat": "^1.0.0"
+  }
+}
