@@ -3,7 +3,7 @@
 ## Install
 
 ```bash
-$ npm install concat
+$ npm install pconcat
 ```
 
 ## Usage

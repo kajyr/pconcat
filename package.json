@@ -1,5 +1,5 @@
 {
-  "name": "pcontat",
+  "name": "pconcat",
   "version": "1.0.0",
   "description": "A wrapper around the concat module, that returns a promise",
   "main": "index.js",
