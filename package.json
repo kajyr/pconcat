@@ -2,14 +2,26 @@
   "name": "pconcat",
   "version": "1.0.0",
   "description": "A wrapper around the concat module, that returns a promise",
+  "homepage": "https://github.com/kajyr/pconcat",
   "main": "index.js",
   "scripts": {
     "test": "nodeunit"
   },
-  "author": "",
+  "author": {
+    "name": "Carlo",
+    "email": "carlo.panzi@gmail.com",
+    "url": "http://kajyr.github.io"
+  },
   "license": "ISC",
   "dependencies": {
     "concat": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kajyr/pconcat.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kajyr/pconcat/issues"
   },
   "keywords": [
     "concat",
