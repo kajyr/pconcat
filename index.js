@@ -6,7 +6,7 @@ function pconcat (file_array, dest) {
 			if (error) {
 				return reject(error);
 			}
-			return resolve(error);
+			return resolve(dest);
 		});
 	});
  };
