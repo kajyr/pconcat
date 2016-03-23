@@ -1,7 +1,7 @@
 {
   "name": "pconcat",
   "version": "1.1.0",
-  "description": "A wrapper around the concat module, that returns a promise",
+  "description": "A concat module that loves promises.",
   "homepage": "https://github.com/kajyr/pconcat",
   "main": "index.js",
   "scripts": {
