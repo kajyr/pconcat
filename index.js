@@ -17,7 +17,6 @@ function appendFile (file, dest) {
 function pconcat (file_array, dest) {
 	return new Promise((resolve, reject) => {
 		fs.writeFile(dest, '',  (error) => {
-			console.log("qui non ci entro mai", error);
 			if (error) return reject(error);
 			return resolve(dest);
 		})
