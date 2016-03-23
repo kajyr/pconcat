@@ -17,13 +17,17 @@ function appendFile (file, dest) {
 function pconcat (file_array, dest) {
 	return new Promise((resolve, reject) => {
 		fs.writeFile(dest, '',  (error) => {
+			console.log("qui non ci entro mai", error);
 			if (error) return reject(error);
 			return resolve(dest);
 		})
 	})
 	.then((dest) => {
 		return Promise.all([].concat(file_array).map((file) => appendFile(file, dest) ));
-	})
+	}).then(() => {
+				return dest;
+		}
+	)
 };
 
 
