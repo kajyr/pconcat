@@ -1,15 +1,30 @@
-var concat = require('concat');
+var fs = require("fs");
 
-function pconcat (file_array, dest) {
-	return new Promise(function(resolve, reject) {
-		concat(file_array, dest, function (error) {
-			if (error) {
-				return reject(error);
-			}
-			return resolve(dest);
+
+function appendFile (file, dest) {
+	return new Promise((resolve, reject) => {
+		fs.readFile(file, (error, buffer) => {
+			if (error) return reject(error);
+
+			fs.appendFile(dest, buffer, (error) => {
+				if (error) return reject(err);
+				return resolve(dest);
+			});
 		});
 	});
- };
+}
+
+function pconcat (file_array, dest) {
+	return new Promise((resolve, reject) => {
+		fs.writeFile(dest, '',  (error) => {
+			if (error) return reject(error);
+			return resolve(dest);
+		})
+	})
+	.then((dest) => {
+		return Promise.all([].concat(file_array).map((file) => appendFile(file, dest) ));
+	})
+};
 
 
- module.exports = pconcat;
+module.exports = pconcat;
