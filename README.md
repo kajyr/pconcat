@@ -1,5 +1,7 @@
 # pconcat
 
+[![Build Status](https://travis-ci.org/kajyr/pconcat.svg?branch=master)](https://travis-ci.org/kajyr/pconcat)
+
 ## Install
 
 ```bash
