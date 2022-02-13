@@ -1,48 +1,45 @@
 var fs = require("fs");
 
-function loop (len, each, callback) {
+function loop(len, each, callback) {
   if (len == 0) return callback();
 
-  (function loop (i) {
+  (function loop(i) {
     each(next, i);
 
-    function next (error) {
+    function next(error) {
       if (error) return callback(error);
       if (i + 1 == len) return callback();
 
       loop(i + 1);
     }
-  }(0));
+  })(0);
 }
 
-function concat (files, dest, callback) {
-  fs.writeFile(dest, '', function (error) {
+function concat(files, dest, callback) {
+  fs.writeFile(dest, "", function (error) {
     if (error) return callback(error);
 
     loop(files.length, each, callback);
 
-    function each (done, i) {
+    function each(done, i) {
       fs.readFile(files[i], function (error, buffer) {
         if (error) return done(error);
 
         fs.appendFile(dest, buffer, done);
       });
     }
-
   });
-
 }
 
-function pconcat (file_array, dest) {
-	return new Promise(function(resolve, reject) {
-		concat(file_array, dest, function (error) {
-			if (error) {
-				return reject(error);
-			}
-			return resolve(dest);
-		});
-	});
- };
+function pconcat(file_array, dest) {
+  return new Promise(function (resolve, reject) {
+    concat(file_array, dest, function (error) {
+      if (error) {
+        return reject(error);
+      }
+      return resolve(dest);
+    });
+  });
+}
 
-
- module.exports = pconcat;
+module.exports = pconcat;

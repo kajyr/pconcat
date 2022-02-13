@@ -1,6 +1,6 @@
 # pconcat
 
-[![Build Status](https://travis-ci.org/kajyr/pconcat.svg?branch=master)](https://travis-ci.org/kajyr/pconcat)
+[![Build Status](https://github.com/kajyr/pconcat/workflows/test/badge.svg)](https://github.com/kajyr/mclip/actions)
 
 ## Install
 
@@ -13,11 +13,13 @@ $ npm install pconcat
 Async concatenate files using promises.
 
 ```javascript
-var concat = require('pconcat')
+var concat = require("pconcat");
 
-concat(['a.txt', 'b.txt', 'c.txt'], 'all.txt').then(function() {
+concat(["a.txt", "b.txt", "c.txt"], "all.txt")
+  .then(function () {
     // done!
-}).catch(function(err) {
+  })
+  .catch(function (err) {
     // if error :(
-})
+  });
 ```
