@@ -1,6 +1,6 @@
 # pconcat
 
-[![Build Status](https://github.com/kajyr/pconcat/workflows/test/badge.svg)](https://github.com/kajyr/mclip/actions)
+[![Build Status](https://github.com/kajyr/pconcat/workflows/test/badge.svg)](https://github.com/kajyr/pconcat/actions)
 
 ## Install
 

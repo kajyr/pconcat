@@ -5,7 +5,7 @@
   "homepage": "https://github.com/kajyr/pconcat",
   "main": "index.js",
   "scripts": {
-    "test": "nodeunit"
+    "test": "ava"
   },
   "author": {
     "name": "Carlo",
@@ -13,7 +13,6 @@
     "url": "http://kajyr.github.io"
   },
   "license": "ISC",
-  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git://github.com/kajyr/pconcat.git"
@@ -24,5 +23,8 @@
   "keywords": [
     "concat",
     "promises"
-  ]
+  ],
+  "devDependencies": {
+    "ava": "^4.0.1"
+  }
 }
